@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name = "browser" value = "Chrome"/>
+  <listeners>
+  		<listener class-name = "com.ds.utilis.ListenerSetup"/>
+  		<listener class-name = "com.ds.utilis.ExtentedReporterNG"/>
+  </listeners>
+
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.ds.testlayer.LoginPageTest"/>
+      <class name="com.ds.testlayer.Logoutfunctionality"/>
+      <class name="com.ds.testlayer.TranactionTest"/>
+      <class name="com.ds.testlayer.BuyFunctionality"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
